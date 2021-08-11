@@ -5,18 +5,18 @@ using JLD
 using Dates
 using KrylovKit
 
-simulation = "E:/UC Davis/Research/Square spin ice/Square-Spin-Ice/Yutan_code/Results/Square_Spin_Ice_Measurement_L=4_hmin=99.99999999999999_hmax=1.0e8_Date_Tue_27_Jul_2021_16_34_33.jld"
+simulation = "E:/UC Davis/Research/Square spin ice/Square-Spin-Ice/Yutan_code/Results/Square_Spin_Ice_Measurement_J2=1_L1=4_L2=6_hmin=0.01_hmax=100.0_Date_Sun_08_Aug_2021_18_40_11.jld"
 
 result = load(simulation, "result")
-h_vals = result[1]
+#=h_vals = result[1]
 m = result[2]
 S_pi = result[3]
 Fidelity = result[4]
 Fcl_vals = result[5]
-Fqm_vals = result[6]
-S_entangle_vals = result[7]
+Fqm_vals = result[6]=#
+S_entangle_vals = result[6]
 
-println(S_pi[end])
+println(S_entangle_vals[1])
 #=H_even = load(simulation)["sim"][1]
 H_odd = load(simulation)["sim"][2]
 
