@@ -2,7 +2,7 @@ using JLD
 using Plots
 
 path = "E:/UC Davis/Research/Square spin ice/Square-Spin-Ice/Yutan_code/Results/"
-name =["Square_Spin_Ice_Measurement_J2=1_L1=4_L2=6_hmin=0.01_hmax=0.5_Date_Tue_10_Aug_2021_18_09_52.jld",#=
+name =["Square_Spin_Ice_Measurement_J2=1.0_L1=4_L2=6_hmin=0.01_hmax=10.0_Date_Sun_26_Sep_2021_03_42_26.jld",#=
 "Square_Spin_Ice_Measurement_L=4_hmin=0.1_hmax=0.5_Date_Tue_27_Jul_2021_15_17_10.jld",
 "Square_Spin_Ice_Measurement_tilted20sites_L1=11_L2=11_hmin=0.01_hmax=0.5_Date_Wed_04_Aug_2021_01_43_25.jld",
 "Square_Spin_Ice_Measurement_J2=0.4444444444444444_L1=4_L2=4_hmin=0.01_hmax=0.5_Date_Thu_05_Aug_2021_01_46_36.jld",
@@ -135,5 +135,5 @@ function plotting(savename::String, xlabel::String, Quantity::Array)
     end
     savefig(save_path * "S_entangle_" *savename*"hmin=$(h_vals[1])_hmax=$(h_vals[end])"* ".png")
 end
-plotting("Square_Spin_Ice_Measurement_24_16_20sites_compare", "h", vcat(["N"],[24,16.20]))
+plotting("Square_Spin_Ice_Measurement_24sites_Spi_0_Spi_compare", "h", vcat(["N"],[24]))
 #println(Fidelity)
